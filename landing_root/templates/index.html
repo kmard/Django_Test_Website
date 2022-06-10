@@ -5,8 +5,23 @@
     <title>Title</title>
 </head>
 <body>
-  <h1>New Page</h1>
-  {{ a }}
-  <h1>{{ text }}</h1>
+  <h1>Template</h1>
+
+<table border="1">
+    <tr>
+        <th>id</th>
+        <th>Date</th>
+        <th>Name</th>
+        <th>Phone</th>
+    </tr>
+    {% for obj in object_list %}
+    <tr>
+        <td>{{obj.id}}</td>
+        <td>{{obj.order_dt}}</td>
+        <td>{{obj.order_name}}</td>
+        <td>{{obj.order_phone}}</td>
+    </tr>
+    {% endfor %}
+</table>
 </body>
 </html>
