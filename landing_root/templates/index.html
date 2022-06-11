@@ -5,8 +5,18 @@
     <title>Title</title>
 </head>
 <body>
-  <h1>Template</h1>
+<br>
+<form action="{%url 'thanks_page' %}" method="POST">
+    {% csrf_token %}
+    <label>Name</label>
+    <input name="name">
+    <label>Phone</label>
+    <input name="phone">
+    <button type="submit">Send</button>
+</form>
 
+
+<h1>Template</h1>
 <table border="1">
     <tr>
         <th>id</th>
