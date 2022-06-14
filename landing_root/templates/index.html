@@ -1,45 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-<br>
-<style>
-.css_input{
-color:yellow;
-background-color:red;
-}
-</style>
+{% extends 'base.html' %}
 
-<form action="{%url 'thanks_page' %}" method="POST">
-    {% csrf_token %}
-<!--    <label>Name</label>-->
-<!--    <input name="name">-->
-<!--    <label>Phone</label>-->
-<!--    <input name="phone">-->
-    {{form.as_p}}
-    <button type="submit">Send</button>
-</form>
+{% block title %}Title_Index!{% endblock %}
 
+{% block content%}
+<h1>Данные из индекса</h1>
 
-<h1>Template</h1>
-<table border="1">
-    <tr>
-        <th>id</th>
-        <th>Date</th>
-        <th>Name</th>
-        <th>Phone</th>
-    </tr>
-    {% for obj in object_list %}
-    <tr>
-        <td>{{obj.id}}</td>
-        <td>{{obj.order_dt}}</td>
-        <td>{{obj.order_name}}</td>
-        <td>{{obj.order_phone}}</td>
-    </tr>
-    {% endfor %}
-</table>
-</body>
-</html>
+{% include 'index_old.html'%}
+
+{% endblock %}
