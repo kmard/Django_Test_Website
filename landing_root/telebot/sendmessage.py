@@ -2,12 +2,6 @@
 import requests
 from .models import TeleSettings
 
-# https://api.telegram.org/bot5366248286:AAEDMwSTPGx-C4nYfulgmv70XEX7KyhgGyI/sendMessage?chat_id=-689873911&text=text
-
-# token = '5366248286:AAEDMwSTPGx-C4nYfulgmv70XEX7KyhgGyI'
-# chat_id='-689873911'
-# text='Test_2'
-
 def sendTelegram(tg_name, tg_phone):
 
     if TeleSettings.objects.get(pk=1):
