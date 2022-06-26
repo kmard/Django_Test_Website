@@ -5,7 +5,11 @@
     <title>Title</title>
 </head>
 <body>
- <h1>{{ name }} Thanks you, for sending contacts {{phone}}</h1>
+ {% if name %}
+   <h1>{{ name }}, Thanks you, for sending contacts :{{phone}}</h1>
+ {% else %}
+   <h1>Thank you </h1>
+ {% endif %}
 
 </body>
 </html>

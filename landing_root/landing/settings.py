@@ -33,6 +33,9 @@ ALLOWED_HOSTS = []
 
 # 'crm.apps.CrmConfigdjango'
 INSTALLED_APPS = [
+    'telebot.apps.TelebotConfig',
+    'price.apps.PriceConfig',
+    'cms.apps.CmsConfig',
     'crm.apps.CrmConfig',
     'django.contrib.admin',
     'django.contrib.auth',
